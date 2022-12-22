@@ -8,7 +8,7 @@ import 'adaptive_window_type.dart';
 /// This is useful when the user wants to compare the MediaQuery to the current
 /// window size.
 AdaptiveWindowType getWindowType(BuildContext context) {
-  return getBreakpointEntry(context).adaptiveWindowType;
+  return getBreakpointEntry(context).type;
 }
 
 /// Returns the [BreakpointSystemEntry] to the user.

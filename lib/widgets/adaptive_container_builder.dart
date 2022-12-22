@@ -123,8 +123,8 @@ class AdaptiveContainerBuilder extends StatelessWidget {
           transform: transform,
           clipBehavior: clipBehavior,
           constraints: BoxConstraints(
-            minWidth: entry.adaptiveWindowType.widthRangeValues.start,
-            maxWidth: entry.adaptiveWindowType.widthRangeValues.end,
+            minWidth: entry.type.widthRangeValues.start,
+            maxWidth: entry.type.widthRangeValues.end,
           ),
           child: builder(context, entry, constraints),
         );

@@ -29,7 +29,7 @@ class BreakpointSystemEntry with _$BreakpointSystemEntry {
     /// would check if your window width is within the range of xs and s. If your
     /// user has a bigger window size than you would create a different layout for
     /// larger screens.
-    required AdaptiveWindowType adaptiveWindowType,
+    required AdaptiveWindowType type,
 
     /// The number of columns in this breakpoint system entry.
     /// https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins
@@ -58,7 +58,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
   BreakpointSystemEntry(
     range: RangeValues(0, 359),
     portrait: 'small handset',
-    adaptiveWindowType: AdaptiveWindowType.xs(),
+    type: AdaptiveWindowType.xs(),
     columns: 4,
     margins: 16.0,
     gutters: 16.0,
@@ -66,7 +66,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
   BreakpointSystemEntry(
     range: RangeValues(360, 399),
     portrait: 'medium handset',
-    adaptiveWindowType: AdaptiveWindowType.xs(),
+    type: AdaptiveWindowType.xs(),
     columns: 4,
     margins: 16.0,
     gutters: 16.0,
@@ -74,7 +74,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
   BreakpointSystemEntry(
     range: RangeValues(400, 479),
     portrait: 'large handset',
-    adaptiveWindowType: AdaptiveWindowType.xs(),
+    type: AdaptiveWindowType.xs(),
     columns: 4,
     margins: 16.0,
     gutters: 16.0,
@@ -83,7 +83,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
     range: RangeValues(480, 599),
     portrait: 'large handset',
     landscape: 'small handset',
-    adaptiveWindowType: AdaptiveWindowType.xs(),
+    type: AdaptiveWindowType.xs(),
     columns: 4,
     margins: 16.0,
     gutters: 16.0,
@@ -92,7 +92,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
     range: RangeValues(600, 719),
     portrait: 'small tablet',
     landscape: 'medium handset',
-    adaptiveWindowType: AdaptiveWindowType.s(),
+    type: AdaptiveWindowType.s(),
     columns: 8,
     margins: 16.0,
     gutters: 16.0,
@@ -101,7 +101,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
     range: RangeValues(720, 839),
     portrait: 'large tablet',
     landscape: 'large handset',
-    adaptiveWindowType: AdaptiveWindowType.s(),
+    type: AdaptiveWindowType.s(),
     columns: 8,
     margins: 24.0,
     gutters: 24.0,
@@ -110,7 +110,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
     range: RangeValues(840, 959),
     portrait: 'large tablet',
     landscape: 'large handset',
-    adaptiveWindowType: AdaptiveWindowType.s(),
+    type: AdaptiveWindowType.s(),
     columns: 12,
     margins: 24.0,
     gutters: 24.0,
@@ -118,7 +118,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
   BreakpointSystemEntry(
     range: RangeValues(960, 1023),
     landscape: 'small tablet',
-    adaptiveWindowType: AdaptiveWindowType.s(),
+    type: AdaptiveWindowType.s(),
     columns: 12,
     margins: 24.0,
     gutters: 24.0,
@@ -126,7 +126,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
   BreakpointSystemEntry(
     range: RangeValues(1024, 1279),
     landscape: 'large tablet',
-    adaptiveWindowType: AdaptiveWindowType.m(),
+    type: AdaptiveWindowType.m(),
     columns: 12,
     margins: 24.0,
     gutters: 24.0,
@@ -134,7 +134,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
   BreakpointSystemEntry(
     range: RangeValues(1280, 1439),
     landscape: 'large tablet',
-    adaptiveWindowType: AdaptiveWindowType.m(),
+    type: AdaptiveWindowType.m(),
     columns: 12,
     margins: 24.0,
     gutters: 24.0,
@@ -142,7 +142,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
   BreakpointSystemEntry(
     range: RangeValues(1440, 1599),
     portrait: 'small handset',
-    adaptiveWindowType: AdaptiveWindowType.l(),
+    type: AdaptiveWindowType.l(),
     columns: 12,
     margins: 24.0,
     gutters: 24.0,
@@ -150,7 +150,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
   BreakpointSystemEntry(
     range: RangeValues(1600, 1919),
     portrait: 'small handset',
-    adaptiveWindowType: AdaptiveWindowType.l(),
+    type: AdaptiveWindowType.l(),
     columns: 12,
     margins: 24.0,
     gutters: 24.0,
@@ -158,7 +158,7 @@ const List<BreakpointSystemEntry> breakpointSystem = [
   BreakpointSystemEntry(
     range: RangeValues(1920, double.infinity),
     portrait: 'small handset',
-    adaptiveWindowType: AdaptiveWindowType.xl(),
+    type: AdaptiveWindowType.xl(),
     columns: 12,
     margins: 24.0,
     gutters: 24.0,

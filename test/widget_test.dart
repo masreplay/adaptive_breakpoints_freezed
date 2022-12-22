@@ -1,4 +1,3 @@
-import 'package:adaptive_breakpoints_freezed/adaptive/adaptive_window_type.dart';
 import 'package:adaptive_breakpoints_freezed/adaptive_breakpoints_freezed.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -12,7 +11,7 @@ class SizeTestWidget extends StatelessWidget {
       home: Scaffold(
         body: AdaptiveBuilder(
           builder: (context, entry, constraints) {
-            return Text(entry.adaptiveWindowType.name);
+            return Text(entry.type.name);
           },
         ),
       ),

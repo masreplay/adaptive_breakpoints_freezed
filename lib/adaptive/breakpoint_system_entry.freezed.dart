@@ -33,8 +33,7 @@ mixin _$BreakpointSystemEntry {
   /// would check if your window width is within the range of xs and s. If your
   /// user has a bigger window size than you would create a different layout for
   /// larger screens.
-  AdaptiveWindowType get adaptiveWindowType =>
-      throw _privateConstructorUsedError;
+  AdaptiveWindowType get type => throw _privateConstructorUsedError;
 
   /// The number of columns in this breakpoint system entry.
   /// https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins
@@ -68,12 +67,12 @@ abstract class $BreakpointSystemEntryCopyWith<$Res> {
       {RangeValues range,
       String? portrait,
       String? landscape,
-      AdaptiveWindowType adaptiveWindowType,
+      AdaptiveWindowType type,
       int columns,
       double margins,
       double gutters});
 
-  $AdaptiveWindowTypeCopyWith<$Res> get adaptiveWindowType;
+  $AdaptiveWindowTypeCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -93,7 +92,7 @@ class _$BreakpointSystemEntryCopyWithImpl<$Res,
     Object? range = null,
     Object? portrait = freezed,
     Object? landscape = freezed,
-    Object? adaptiveWindowType = null,
+    Object? type = null,
     Object? columns = null,
     Object? margins = null,
     Object? gutters = null,
@@ -111,9 +110,9 @@ class _$BreakpointSystemEntryCopyWithImpl<$Res,
           ? _value.landscape
           : landscape // ignore: cast_nullable_to_non_nullable
               as String?,
-      adaptiveWindowType: null == adaptiveWindowType
-          ? _value.adaptiveWindowType
-          : adaptiveWindowType // ignore: cast_nullable_to_non_nullable
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as AdaptiveWindowType,
       columns: null == columns
           ? _value.columns
@@ -132,10 +131,9 @@ class _$BreakpointSystemEntryCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $AdaptiveWindowTypeCopyWith<$Res> get adaptiveWindowType {
-    return $AdaptiveWindowTypeCopyWith<$Res>(_value.adaptiveWindowType,
-        (value) {
-      return _then(_value.copyWith(adaptiveWindowType: value) as $Val);
+  $AdaptiveWindowTypeCopyWith<$Res> get type {
+    return $AdaptiveWindowTypeCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 }
@@ -152,13 +150,13 @@ abstract class _$$_BreakpointSystemEntryCopyWith<$Res>
       {RangeValues range,
       String? portrait,
       String? landscape,
-      AdaptiveWindowType adaptiveWindowType,
+      AdaptiveWindowType type,
       int columns,
       double margins,
       double gutters});
 
   @override
-  $AdaptiveWindowTypeCopyWith<$Res> get adaptiveWindowType;
+  $AdaptiveWindowTypeCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -175,7 +173,7 @@ class __$$_BreakpointSystemEntryCopyWithImpl<$Res>
     Object? range = null,
     Object? portrait = freezed,
     Object? landscape = freezed,
-    Object? adaptiveWindowType = null,
+    Object? type = null,
     Object? columns = null,
     Object? margins = null,
     Object? gutters = null,
@@ -193,9 +191,9 @@ class __$$_BreakpointSystemEntryCopyWithImpl<$Res>
           ? _value.landscape
           : landscape // ignore: cast_nullable_to_non_nullable
               as String?,
-      adaptiveWindowType: null == adaptiveWindowType
-          ? _value.adaptiveWindowType
-          : adaptiveWindowType // ignore: cast_nullable_to_non_nullable
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as AdaptiveWindowType,
       columns: null == columns
           ? _value.columns
@@ -220,7 +218,7 @@ class _$_BreakpointSystemEntry extends _BreakpointSystemEntry {
       {required this.range,
       this.portrait,
       this.landscape,
-      required this.adaptiveWindowType,
+      required this.type,
       required this.columns,
       required this.margins,
       required this.gutters})
@@ -247,7 +245,7 @@ class _$_BreakpointSystemEntry extends _BreakpointSystemEntry {
   /// user has a bigger window size than you would create a different layout for
   /// larger screens.
   @override
-  final AdaptiveWindowType adaptiveWindowType;
+  final AdaptiveWindowType type;
 
   /// The number of columns in this breakpoint system entry.
   /// https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins
@@ -271,7 +269,7 @@ class _$_BreakpointSystemEntry extends _BreakpointSystemEntry {
 
   @override
   String toString() {
-    return 'BreakpointSystemEntry(range: $range, portrait: $portrait, landscape: $landscape, adaptiveWindowType: $adaptiveWindowType, columns: $columns, margins: $margins, gutters: $gutters)';
+    return 'BreakpointSystemEntry(range: $range, portrait: $portrait, landscape: $landscape, type: $type, columns: $columns, margins: $margins, gutters: $gutters)';
   }
 
   @override
@@ -284,16 +282,15 @@ class _$_BreakpointSystemEntry extends _BreakpointSystemEntry {
                 other.portrait == portrait) &&
             (identical(other.landscape, landscape) ||
                 other.landscape == landscape) &&
-            (identical(other.adaptiveWindowType, adaptiveWindowType) ||
-                other.adaptiveWindowType == adaptiveWindowType) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.columns, columns) || other.columns == columns) &&
             (identical(other.margins, margins) || other.margins == margins) &&
             (identical(other.gutters, gutters) || other.gutters == gutters));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, range, portrait, landscape,
-      adaptiveWindowType, columns, margins, gutters);
+  int get hashCode => Object.hash(
+      runtimeType, range, portrait, landscape, type, columns, margins, gutters);
 
   @JsonKey(ignore: true)
   @override
@@ -308,7 +305,7 @@ abstract class _BreakpointSystemEntry extends BreakpointSystemEntry {
       {required final RangeValues range,
       final String? portrait,
       final String? landscape,
-      required final AdaptiveWindowType adaptiveWindowType,
+      required final AdaptiveWindowType type,
       required final int columns,
       required final double margins,
       required final double gutters}) = _$_BreakpointSystemEntry;
@@ -336,7 +333,7 @@ abstract class _BreakpointSystemEntry extends BreakpointSystemEntry {
   /// would check if your window width is within the range of xs and s. If your
   /// user has a bigger window size than you would create a different layout for
   /// larger screens.
-  AdaptiveWindowType get adaptiveWindowType;
+  AdaptiveWindowType get type;
   @override
 
   /// The number of columns in this breakpoint system entry.
